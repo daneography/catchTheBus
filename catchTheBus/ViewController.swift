@@ -10,6 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var userSelector: UISegmentedControl!
+    @IBAction func userSubmit(_ sender: Any) {
+        switch userSelector.selectedSegmentIndex {
+        case 0:
+            print("driver selected")
+            //segue to driver
+        case 1:
+            print("rider selected")
+            //segue to rider
+        default:
+            break
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
