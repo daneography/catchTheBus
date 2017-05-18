@@ -18,7 +18,7 @@ class ViewController: UIViewController {
             //segue to driver
         case 1:
             print("rider selected")
-            //segue to rider
+            performSegue(withIdentifier: "displayRider", sender: self)
         default:
             break
         }
@@ -32,7 +32,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
+
 
