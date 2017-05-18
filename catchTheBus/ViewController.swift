@@ -9,19 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var userSelector: UISegmentedControl!
-    @IBAction func userSubmit(_ sender: Any) {
-        switch userSelector.selectedSegmentIndex {
-        case 0:
-            print("driver selected")
-            //segue to driver
-        case 1:
-            print("rider selected")
-            performSegue(withIdentifier: "displayRider", sender: self)
-        default:
-            break
-        }
+    
+    @IBAction func userRider(_ sender: Any) {
+        performSegue(withIdentifier: "displayRider", sender: self)
+    }
+    @IBAction func userDriver(_ sender: Any) {
+        performSegue(withIdentifier: "displayDriver", sender: self)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
