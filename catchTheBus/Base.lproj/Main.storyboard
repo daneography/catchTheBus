@@ -147,10 +147,10 @@
             </objects>
             <point key="canvasLocation" x="-246" y="138"/>
         </scene>
-        <!--Rider Navigator Scene-->
+        <!--Rider Navigator-->
         <scene sceneID="7vu-4h-ABW">
             <objects>
-                <navigationController title="Rider Navigator Scene" automaticallyAdjustsScrollViewInsets="NO" id="cGE-3H-P73" sceneMemberID="viewController">
+                <navigationController title="Rider Navigator" automaticallyAdjustsScrollViewInsets="NO" id="cGE-3H-P73" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="THd-AH-M2B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -165,10 +165,10 @@
             </objects>
             <point key="canvasLocation" x="1503" y="138"/>
         </scene>
-        <!--Driver Navigator Scene-->
+        <!--Driver Navigator-->
         <scene sceneID="wix-Gp-hQa">
             <objects>
-                <navigationController title="Driver Navigator Scene" automaticallyAdjustsScrollViewInsets="NO" id="VoI-Hp-QtW" sceneMemberID="viewController">
+                <navigationController title="Driver Navigator" automaticallyAdjustsScrollViewInsets="NO" id="VoI-Hp-QtW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8sn-0P-R4f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
