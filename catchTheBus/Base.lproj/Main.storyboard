@@ -71,7 +71,63 @@
                     <view key="view" contentMode="scaleToFill" id="lou-6A-qH3" customClass="RiderViewController">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="VU6-Ve-tku">
+                                <rect key="frame" x="66" y="144" width="243" height="190"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yin-QN-8cy">
+                                        <rect key="frame" x="74.5" y="0.0" width="168.5" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlT-s2-8CD">
+                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mii-BN-Z2d">
+                                                <rect key="frame" x="83.5" y="0.0" width="85" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="85" id="xz7-yP-X4b"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YZw-pH-wqy">
+                                        <rect key="frame" x="79.5" y="80" width="163.5" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSo-Cr-F2k">
+                                                <rect key="frame" x="0.0" y="0.0" width="78.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nka-dY-ta2">
+                                                <rect key="frame" x="78.5" y="0.0" width="85" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="85" id="iI0-I2-vWl"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiG-9m-z6a">
+                                        <rect key="frame" x="205" y="160" width="38" height="30"/>
+                                        <state key="normal" title="Login"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VU6-Ve-tku" firstAttribute="top" secondItem="wnS-k6-NKt" secondAttribute="bottom" constant="80" id="Xdb-AZ-PUf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VU6-Ve-tku" secondAttribute="trailing" constant="50" id="mxs-kj-UjX"/>
+                            <constraint firstItem="VU6-Ve-tku" firstAttribute="leading" secondItem="lou-6A-qH3" secondAttribute="leadingMargin" constant="50" id="rL1-9F-Fwe"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Rider" id="PLk-z1-ctX">
@@ -86,7 +142,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rnI-7V-lqh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="UJJ-MJ-EF3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2308" y="137"/>
+            <point key="canvasLocation" x="2308" y="136.28185907046478"/>
         </scene>
         <!--Driver-->
         <scene sceneID="HP8-gd-r17">
@@ -112,6 +168,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Log-in"/>
+                                <connections>
+                                    <segue destination="3WR-QV-iHs" kind="show" id="pY9-r3-NV8"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="neA-Dw-vMn">
                                 <rect key="frame" x="0.0" y="269" width="375" height="216"/>
@@ -172,13 +231,33 @@
                     <view key="view" contentMode="scaleToFill" id="bgL-Xq-WJD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdM-c6-yGl">
+                                <rect key="frame" x="16" y="96" width="172" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Routes"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIq-vP-zqH">
+                                <rect key="frame" x="16" y="162" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Quick Ride"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6j8-kR-lbe">
+                                <rect key="frame" x="16" y="225" width="193" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Contact"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Uek-FX-klc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DEV-fF-uf5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4177" y="138"/>
+            <point key="canvasLocation" x="4176.8000000000002" y="137.18140929535232"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Gxg-6l-m84">
