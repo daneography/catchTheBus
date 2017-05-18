@@ -8,26 +8,12 @@
 
 import UIKit
 
-class driverSelectViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-
-    @IBOutlet weak var routeNumbers: UIPickerView!
-    @IBOutlet weak var label: UILabel!
-    
-    let routeNumber = ["1", "2", "3", "4", "5"]
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return routeNumber[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return routeNumber.count
-    }
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        label.text =  routeNumber[row]
+class driverSelectViewController: UIViewController {
+    @IBAction func unwindTodriverSelectViewController(_ segue: UIStoryboardSegue) {
+        
+        // for now, simply defining the method is sufficient.
+        // we'll add code later
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
