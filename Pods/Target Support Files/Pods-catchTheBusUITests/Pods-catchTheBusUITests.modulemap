@@ -1,0 +1,6 @@
+framework module Pods_catchTheBusUITests {
+  umbrella header "Pods-catchTheBusUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

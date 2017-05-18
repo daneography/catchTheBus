@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9jO-P9-u2Q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VoI-Hp-QtW">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -31,7 +31,6 @@
                                 <state key="normal" title="Driver"/>
                                 <connections>
                                     <action selector="userDriver:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CAS-Pc-IBj"/>
-                                    <segue destination="VoI-Hp-QtW" kind="show" identifier="displayDriver" id="KEf-Ec-yNo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oL7-d1-0UL">
@@ -118,6 +117,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiG-9m-z6a">
                                         <rect key="frame" x="205" y="160" width="38" height="30"/>
                                         <state key="normal" title="Login"/>
+                                        <connections>
+                                            <segue destination="TSl-2z-eM8" kind="show" id="HDM-w9-PL5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -131,7 +133,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Rider" id="PLk-z1-ctX">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="y2Y-PK-WPz">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="y2Y-PK-WPz">
                             <connections>
                                 <segue destination="UJJ-MJ-EF3" kind="unwind" unwindAction="unwindToListNotesViewController:" id="Jig-Yc-0Lg"/>
                             </connections>
@@ -147,7 +149,7 @@
         <!--Driver-->
         <scene sceneID="HP8-gd-r17">
             <objects>
-                <viewController id="Hv0-cE-si7" sceneMemberID="viewController">
+                <viewController id="Hv0-cE-si7" customClass="driverSelectViewController" customModule="catchTheBus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xJI-hc-EbY"/>
                         <viewControllerLayoutGuide type="bottom" id="cek-ay-riE"/>
@@ -172,10 +174,6 @@
                                     <segue destination="3WR-QV-iHs" kind="show" id="pY9-r3-NV8"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="neA-Dw-vMn">
-                                <rect key="frame" x="0.0" y="269" width="375" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Employee #: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TA-J8-9j3">
                                 <rect key="frame" x="71" y="114" width="97" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -208,7 +206,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Driver" id="PlX-lc-goe">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="5qp-8I-Nyg">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="5qp-8I-Nyg">
                             <connections>
                                 <segue destination="H0h-1F-RzI" kind="unwind" unwindAction="unwindToListNotesViewController:" id="lqe-lt-TW9"/>
                             </connections>
@@ -220,10 +218,10 @@
             </objects>
             <point key="canvasLocation" x="2308" y="902.69865067466276"/>
         </scene>
-        <!--View Controller-->
+        <!--Rider2-->
         <scene sceneID="L0Z-0e-nPL">
             <objects>
-                <viewController id="SMS-0q-yQT" sceneMemberID="viewController">
+                <viewController title="Rider2" id="SMS-0q-yQT" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ufh-tn-VGm"/>
                         <viewControllerLayoutGuide type="bottom" id="CVO-ux-xLk"/>
@@ -232,34 +230,183 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdM-c6-yGl">
-                                <rect key="frame" x="16" y="96" width="172" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdM-c6-yGl">
+                                <rect key="frame" x="101" y="220" width="172" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="Routes"/>
+                                <connections>
+                                    <segue destination="bkQ-gx-eRB" kind="show" id="1jb-jb-KdL"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIq-vP-zqH">
-                                <rect key="frame" x="16" y="162" width="240" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIq-vP-zqH">
+                                <rect key="frame" x="67" y="318" width="240" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qJ3-j1-4gi"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="Quick Ride"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6j8-kR-lbe">
-                                <rect key="frame" x="16" y="225" width="193" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6j8-kR-lbe">
+                                <rect key="frame" x="91" y="402" width="193" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="Contact"/>
+                                <connections>
+                                    <segue destination="f4n-fk-HAZ" kind="show" id="uSc-P2-dQw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NdM-c6-yGl" firstAttribute="centerX" secondItem="pIq-vP-zqH" secondAttribute="centerX" id="36X-41-ak1"/>
+                            <constraint firstItem="CVO-ux-xLk" firstAttribute="top" secondItem="6j8-kR-lbe" secondAttribute="bottom" constant="175" id="7U7-hQ-6DY"/>
+                            <constraint firstItem="pIq-vP-zqH" firstAttribute="top" secondItem="NdM-c6-yGl" secondAttribute="bottom" constant="48" id="8Xq-am-Rqd"/>
+                            <constraint firstItem="pIq-vP-zqH" firstAttribute="leading" secondItem="bgL-Xq-WJD" secondAttribute="leadingMargin" constant="51" id="FjR-nC-7pd"/>
+                            <constraint firstItem="NdM-c6-yGl" firstAttribute="top" secondItem="Ufh-tn-VGm" secondAttribute="bottom" constant="156" id="LCX-Ei-hlR"/>
+                            <constraint firstItem="pIq-vP-zqH" firstAttribute="centerY" secondItem="bgL-Xq-WJD" secondAttribute="centerY" id="RGj-Ni-so9"/>
+                            <constraint firstItem="NdM-c6-yGl" firstAttribute="leading" secondItem="bgL-Xq-WJD" secondAttribute="leadingMargin" constant="85" id="WHN-ZX-FMK"/>
+                            <constraint firstItem="6j8-kR-lbe" firstAttribute="top" secondItem="pIq-vP-zqH" secondAttribute="bottom" constant="54" id="knM-Np-Bg9"/>
+                            <constraint firstItem="6j8-kR-lbe" firstAttribute="leading" secondItem="bgL-Xq-WJD" secondAttribute="leadingMargin" constant="75" id="ldv-C3-VHX"/>
+                            <constraint firstItem="pIq-vP-zqH" firstAttribute="centerX" secondItem="6j8-kR-lbe" secondAttribute="centerX" id="rrB-Vl-anD"/>
+                            <constraint firstItem="NdM-c6-yGl" firstAttribute="centerX" secondItem="bgL-Xq-WJD" secondAttribute="centerX" id="tww-7K-0yY"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Uek-FX-klc"/>
+                    <navigationItem key="navigationItem" title="Rider" id="Uek-FX-klc">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="MDo-qh-SKv">
+                            <connections>
+                                <segue destination="L6k-HC-Rvp" kind="unwind" unwindAction="unwindToListNotesViewController:" id="auk-bS-hIp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DEV-fF-uf5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="L6k-HC-Rvp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4176.8000000000002" y="137.18140929535232"/>
         </scene>
-        <!--View Controller-->
+        <!--Contact Us View COntroller-->
+        <scene sceneID="mPH-jt-EaV">
+            <objects>
+                <exit id="LrK-2b-BYZ" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dCQ-dU-gaF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="Contact Us View COntroller" id="kPf-AV-0GJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zzR-tn-kKT"/>
+                        <viewControllerLayoutGuide type="bottom" id="AoR-dC-VHy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f0B-Bq-bZz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Contact us" id="2rs-YN-04g">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="dmm-rJ-feW">
+                            <connections>
+                                <segue destination="LrK-2b-BYZ" kind="unwind" unwindAction="unwindToListNotesViewController:" id="bgG-VT-h8l"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="6220" y="396.25187406296857"/>
+        </scene>
+        <!--FinalRider View Controller-->
+        <scene sceneID="VDJ-bg-tN4">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qra-sK-Ifi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="wKi-QX-paQ" userLabel="Exit" sceneMemberID="exit"/>
+                <viewController title="FinalRider View Controller" id="hvN-hm-zdJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="43d-pG-POI"/>
+                        <viewControllerLayoutGuide type="bottom" id="DV3-jO-YTF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jAX-I7-KnU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route #:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQL-0c-o0C">
+                                <rect key="frame" x="67" y="72" width="68" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="CwW-lD-Qqc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bus Stop #:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIS-j9-NVz">
+                                <rect key="frame" x="230" y="72" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="43e-kM-u9N">
+                                <rect key="frame" x="16" y="101" width="170" height="138"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="138" id="lx4-GK-M13"/>
+                                </constraints>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pc5-27-vkZ">
+                                <rect key="frame" x="194" y="101" width="165" height="138"/>
+                            </pickerView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cgy-Nb-fKe">
+                                <rect key="frame" x="16" y="269" width="343" height="314"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bus Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzw-yh-igF">
+                                <rect key="frame" x="24" y="591" width="335" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="tiS-uc-Enh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ETA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJ4-fP-qKl">
+                                <rect key="frame" x="24" y="631" width="335" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="djk-ew-lw6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DV3-jO-YTF" firstAttribute="top" secondItem="SJ4-fP-qKl" secondAttribute="bottom" constant="4" id="2Xz-31-g6l"/>
+                            <constraint firstItem="SJ4-fP-qKl" firstAttribute="top" secondItem="pzw-yh-igF" secondAttribute="bottom" constant="8" symbolic="YES" id="4G8-IE-5di"/>
+                            <constraint firstItem="43e-kM-u9N" firstAttribute="leading" secondItem="cgy-Nb-fKe" secondAttribute="leading" id="4Ss-kG-ssj"/>
+                            <constraint firstItem="cgy-Nb-fKe" firstAttribute="trailing" secondItem="pzw-yh-igF" secondAttribute="trailing" id="IW6-rh-SIc"/>
+                            <constraint firstItem="jIS-j9-NVz" firstAttribute="leading" secondItem="ZQL-0c-o0C" secondAttribute="trailing" constant="95" id="K9z-8T-4JB"/>
+                            <constraint firstItem="ZQL-0c-o0C" firstAttribute="leading" secondItem="jAX-I7-KnU" secondAttribute="leadingMargin" constant="51" id="Myt-Yc-vPY"/>
+                            <constraint firstItem="pzw-yh-igF" firstAttribute="leading" secondItem="SJ4-fP-qKl" secondAttribute="leading" id="ND0-qb-Vk2"/>
+                            <constraint firstItem="43e-kM-u9N" firstAttribute="top" secondItem="ZQL-0c-o0C" secondAttribute="bottom" constant="8" symbolic="YES" id="NZ2-Jp-QX3"/>
+                            <constraint firstItem="pzw-yh-igF" firstAttribute="top" secondItem="cgy-Nb-fKe" secondAttribute="bottom" constant="8" symbolic="YES" id="O4h-Qp-hGN"/>
+                            <constraint firstItem="ZQL-0c-o0C" firstAttribute="top" secondItem="43d-pG-POI" secondAttribute="bottom" constant="8" symbolic="YES" id="WcG-7s-NNC"/>
+                            <constraint firstItem="ZQL-0c-o0C" firstAttribute="centerX" secondItem="43e-kM-u9N" secondAttribute="centerX" id="gWP-AH-iBK"/>
+                            <constraint firstItem="ZQL-0c-o0C" firstAttribute="baseline" secondItem="jIS-j9-NVz" secondAttribute="baseline" id="jKq-cE-jNP"/>
+                            <constraint firstItem="pc5-27-vkZ" firstAttribute="trailing" secondItem="cgy-Nb-fKe" secondAttribute="trailing" id="jyd-11-CDZ"/>
+                            <constraint firstItem="pzw-yh-igF" firstAttribute="trailing" secondItem="SJ4-fP-qKl" secondAttribute="trailing" id="krV-ue-zpE"/>
+                            <constraint firstItem="43e-kM-u9N" firstAttribute="leading" secondItem="jAX-I7-KnU" secondAttribute="leadingMargin" id="l9N-WW-KlJ"/>
+                            <constraint firstItem="pzw-yh-igF" firstAttribute="leading" secondItem="jAX-I7-KnU" secondAttribute="leadingMargin" constant="8" id="lll-Aw-Anh"/>
+                            <constraint firstItem="pc5-27-vkZ" firstAttribute="trailing" secondItem="jAX-I7-KnU" secondAttribute="trailingMargin" id="noq-bR-M4w"/>
+                            <constraint firstItem="43e-kM-u9N" firstAttribute="bottom" secondItem="pc5-27-vkZ" secondAttribute="bottom" id="oC2-m1-dc0"/>
+                            <constraint firstItem="cgy-Nb-fKe" firstAttribute="top" secondItem="43e-kM-u9N" secondAttribute="bottom" constant="30" id="qU0-87-8Vh"/>
+                            <constraint firstItem="pc5-27-vkZ" firstAttribute="leading" secondItem="43e-kM-u9N" secondAttribute="trailing" constant="8" symbolic="YES" id="uEv-89-uIP"/>
+                            <constraint firstItem="43e-kM-u9N" firstAttribute="top" secondItem="pc5-27-vkZ" secondAttribute="top" id="vuK-TT-FFI"/>
+                            <constraint firstItem="jIS-j9-NVz" firstAttribute="centerX" secondItem="pc5-27-vkZ" secondAttribute="centerX" id="wfB-kM-eeZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ifF-bg-wey">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="a95-fo-V9C">
+                            <connections>
+                                <segue destination="wKi-QX-paQ" kind="unwind" unwindAction="unwindToListNotesViewController:" id="o5y-oR-Ej0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="6212" y="-293"/>
+        </scene>
+        <!--Driver-->
         <scene sceneID="Gxg-6l-m84">
             <objects>
                 <viewController id="joQ-6t-L9r" sceneMemberID="viewController">
@@ -306,7 +453,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ridees waiting: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4r-1s-dZ2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Riders waiting: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4r-1s-dZ2">
                                 <rect key="frame" x="100" y="483" width="175" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -316,9 +463,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3c9-la-rlO"/>
+                    <navigationItem key="navigationItem" title="Driver" id="3c9-la-rlO">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="ENJ-Cm-OsD">
+                            <connections>
+                                <segue destination="gQG-lU-jlv" kind="unwind" unwindAction="unwindToListNotesViewController:" id="tPl-gh-C1e"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RPj-89-Hcj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="gQG-lU-jlv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4176.8000000000002" y="902.69865067466276"/>
         </scene>
@@ -376,10 +530,10 @@
             </objects>
             <point key="canvasLocation" x="1502" y="903"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Rider Navigation Controller 2-->
         <scene sceneID="j87-Ut-PsX">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TSl-2z-eM8" sceneMemberID="viewController">
+                <navigationController title="Rider Navigation Controller 2" automaticallyAdjustsScrollViewInsets="NO" id="TSl-2z-eM8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1LN-Ox-f6L">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -394,10 +548,10 @@
             </objects>
             <point key="canvasLocation" x="3238" y="138"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Bus Stop Navigator Page-->
         <scene sceneID="y7l-2D-OBu">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3WR-QV-iHs" sceneMemberID="viewController">
+                <navigationController title="Bus Stop Navigator Page" automaticallyAdjustsScrollViewInsets="NO" id="3WR-QV-iHs" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="y7M-if-Hwf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -411,6 +565,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="auy-8K-EQu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3237.5999999999999" y="902.69865067466276"/>
+        </scene>
+        <!--Bus ETA Navigator Controller-->
+        <scene sceneID="W3Y-Ai-BKM">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LYr-vz-u2V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController title="Bus ETA Navigator Controller" automaticallyAdjustsScrollViewInsets="NO" id="bkQ-gx-eRB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="U10-Fn-Igi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hvN-hm-zdJ" kind="relationship" relationship="rootViewController" id="PkM-jF-lvc"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="5273" y="-294"/>
+        </scene>
+        <!--Contact Us Navigator-->
+        <scene sceneID="rKw-td-7Wp">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ize-AF-jcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController title="Contact Us Navigator" automaticallyAdjustsScrollViewInsets="NO" id="f4n-fk-HAZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GC9-dG-W9X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kPf-AV-0GJ" kind="relationship" relationship="rootViewController" id="vL7-Z7-bip"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="5280.8000000000002" y="396.25187406296857"/>
         </scene>
     </scenes>
 </document>
