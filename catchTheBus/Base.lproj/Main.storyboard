@@ -22,9 +22,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ssi-q4-S6O">
-                                <rect key="frame" x="16" y="77" width="145" height="48"/>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0w9-Al-Aul">
                                 <rect key="frame" x="91" y="220" width="192" height="105"/>
                                 <constraints>
@@ -54,7 +51,6 @@
                             <constraint firstItem="oL7-d1-0UL" firstAttribute="leading" secondItem="0w9-Al-Aul" secondAttribute="leading" id="APv-h3-S5A"/>
                             <constraint firstItem="oL7-d1-0UL" firstAttribute="trailing" secondItem="0w9-Al-Aul" secondAttribute="trailing" id="FXN-zm-K10"/>
                             <constraint firstItem="0w9-Al-Aul" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ojA-H5-wVO"/>
-                            <constraint firstItem="0w9-Al-Aul" firstAttribute="top" secondItem="Ssi-q4-S6O" secondAttribute="bottom" constant="95" id="qWg-Xv-99p"/>
                             <constraint firstItem="0w9-Al-Aul" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="75" id="s5w-Oj-Rtb"/>
                         </constraints>
                     </view>
@@ -68,20 +64,39 @@
         <scene sceneID="SiM-d5-fKa">
             <objects>
                 <viewController id="CMj-Gq-zn9" customClass="RiderViewController" sceneMemberID="viewController">
-                    <toolbar key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Wi7-LG-2Z3">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wnS-k6-NKt"/>
+                        <viewControllerLayoutGuide type="bottom" id="nak-p1-fpr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lou-6A-qH3" customClass="RiderViewController">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <items>
-                            <barButtonItem title="Item" id="YQp-Fp-nSC"/>
-                        </items>
-                    </toolbar>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This work?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnd-QP-HRg">
+                                <rect key="frame" x="106" y="160" width="102" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="x2n-c8-uZI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fnd-QP-HRg" firstAttribute="leading" secondItem="lou-6A-qH3" secondAttribute="leadingMargin" constant="90" id="qEe-jY-wlQ"/>
+                            <constraint firstItem="Fnd-QP-HRg" firstAttribute="top" secondItem="wnS-k6-NKt" secondAttribute="bottom" constant="96" id="vSU-R3-x5I"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Rider" id="PLk-z1-ctX">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="yD1-jV-A1v">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="y2Y-PK-WPz">
                             <connections>
-                                <segue destination="UJJ-MJ-EF3" kind="unwind" identifier="cancelRider" unwindAction="unwindToListNotesViewController:" id="iNg-qC-tDu"/>
+                                <segue destination="UJJ-MJ-EF3" kind="unwind" unwindAction="unwindToListNotesViewController:" id="Jig-Yc-0Lg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rnI-7V-lqh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="UJJ-MJ-EF3" userLabel="Exit" sceneMemberID="exit"/>
@@ -101,15 +116,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Driver" id="PlX-lc-goe">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="81A-jh-lFL">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="5qp-8I-Nyg">
                             <connections>
-                                <segue destination="H0h-1F-RzI" kind="unwind" identifier="cancelDriver" unwindAction="unwindToListNotesViewController:" id="LmE-0L-hVf"/>
+                                <segue destination="H0h-1F-RzI" kind="unwind" unwindAction="unwindToListNotesViewController:" id="lqe-lt-TW9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tly-6T-G97" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="H0h-1F-RzI" userLabel="Exit" sceneMemberID="exit"/>
@@ -134,10 +147,10 @@
             </objects>
             <point key="canvasLocation" x="-246" y="138"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Rider Navigator Scene-->
         <scene sceneID="7vu-4h-ABW">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cGE-3H-P73" sceneMemberID="viewController">
+                <navigationController title="Rider Navigator Scene" automaticallyAdjustsScrollViewInsets="NO" id="cGE-3H-P73" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="THd-AH-M2B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -152,10 +165,10 @@
             </objects>
             <point key="canvasLocation" x="1503" y="138"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Driver Navigator Scene-->
         <scene sceneID="wix-Gp-hQa">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VoI-Hp-QtW" sceneMemberID="viewController">
+                <navigationController title="Driver Navigator Scene" automaticallyAdjustsScrollViewInsets="NO" id="VoI-Hp-QtW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8sn-0P-R4f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
