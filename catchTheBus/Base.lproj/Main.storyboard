@@ -22,22 +22,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ssi-q4-S6O">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ssi-q4-S6O">
                                 <rect key="frame" x="16" y="77" width="145" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0w9-Al-Aul">
-                                <rect key="frame" x="176" y="433" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0w9-Al-Aul">
+                                <rect key="frame" x="91" y="220" width="192" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="chf-de-Lio"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <state key="normal" title="Driver"/>
                                 <connections>
                                     <action selector="userDriver:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CAS-Pc-IBj"/>
                                     <segue destination="VoI-Hp-QtW" kind="show" identifier="displayDriver" id="KEf-Ec-yNo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oL7-d1-0UL">
-                                <rect key="frame" x="176" y="528" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oL7-d1-0UL">
+                                <rect key="frame" x="91" y="333" width="192" height="96"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <state key="normal" title="Rider"/>
                                 <connections>
                                     <action selector="userRider:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nFM-6O-1SQ"/>
@@ -46,6 +48,15 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oL7-d1-0UL" firstAttribute="top" secondItem="0w9-Al-Aul" secondAttribute="bottom" constant="8" symbolic="YES" id="6VD-0E-FGJ"/>
+                            <constraint firstItem="0w9-Al-Aul" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="220" id="6g1-u5-K0e"/>
+                            <constraint firstItem="oL7-d1-0UL" firstAttribute="leading" secondItem="0w9-Al-Aul" secondAttribute="leading" id="APv-h3-S5A"/>
+                            <constraint firstItem="oL7-d1-0UL" firstAttribute="trailing" secondItem="0w9-Al-Aul" secondAttribute="trailing" id="FXN-zm-K10"/>
+                            <constraint firstItem="0w9-Al-Aul" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ojA-H5-wVO"/>
+                            <constraint firstItem="0w9-Al-Aul" firstAttribute="top" secondItem="Ssi-q4-S6O" secondAttribute="bottom" constant="95" id="qWg-Xv-99p"/>
+                            <constraint firstItem="0w9-Al-Aul" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="75" id="s5w-Oj-Rtb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Catch the Bus" id="uIh-kJ-Q5b"/>
                 </viewController>
@@ -57,33 +68,23 @@
         <scene sceneID="SiM-d5-fKa">
             <objects>
                 <viewController id="CMj-Gq-zn9" customClass="RiderViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wnS-k6-NKt"/>
-                        <viewControllerLayoutGuide type="bottom" id="nak-p1-fpr"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="lou-6A-qH3" customClass="RiderViewController">
+                    <toolbar key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Wi7-LG-2Z3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This work?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnd-QP-HRg">
-                                <rect key="frame" x="106" y="160" width="102" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="102" id="x2n-c8-uZI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Fnd-QP-HRg" firstAttribute="leading" secondItem="lou-6A-qH3" secondAttribute="leadingMargin" constant="90" id="qEe-jY-wlQ"/>
-                            <constraint firstItem="Fnd-QP-HRg" firstAttribute="top" secondItem="wnS-k6-NKt" secondAttribute="bottom" constant="96" id="vSU-R3-x5I"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Rider" id="CZB-hz-xzt"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <items>
+                            <barButtonItem title="Item" id="YQp-Fp-nSC"/>
+                        </items>
+                    </toolbar>
+                    <navigationItem key="navigationItem" title="Rider" id="PLk-z1-ctX">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="yD1-jV-A1v">
+                            <connections>
+                                <segue destination="UJJ-MJ-EF3" kind="unwind" identifier="cancelRider" unwindAction="unwindToListNotesViewController:" id="iNg-qC-tDu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rnI-7V-lqh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="UJJ-MJ-EF3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2308" y="137"/>
         </scene>
@@ -100,9 +101,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Driver" id="PlX-lc-goe"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Driver" id="PlX-lc-goe">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="81A-jh-lFL">
+                            <connections>
+                                <segue destination="H0h-1F-RzI" kind="unwind" identifier="cancelDriver" unwindAction="unwindToListNotesViewController:" id="LmE-0L-hVf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tly-6T-G97" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="H0h-1F-RzI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2308" y="903"/>
         </scene>
