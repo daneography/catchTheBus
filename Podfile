@@ -7,6 +7,7 @@ target 'catchTheBus' do
 
   # Pods for catchTheBus
 	pod 'Alamofire', '~> 4.4'
+	pod 'SwiftyJSON', '~> 3.1.4'
   target 'catchTheBusTests' do
     inherit! :search_paths
     # Pods for testing

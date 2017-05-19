@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import MapKit
 
 
 class busETAViewController: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate{
@@ -15,14 +16,37 @@ class busETAViewController: UIViewController,UIPickerViewDataSource, UIPickerVie
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var routeNumberPicker: UIPickerView!
     let selectedRouteNumber = ["71","102", "191"]
+    //////////////////////////////////////
+    //////////////////////////////////////
+    
+    @IBOutlet weak var mapView: MKMapView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //set initial location in Atlanta
+        let initialLocation = CLLocation(latitude: 33.748995, longitude: -84.387982)
+        
+        centerMapOnLocation(location: initialLocation)
+    }
+    
+    let regionRadius : CLLocationDistance = 1000
+    
+    func centerMapOnLocation(location : CLLocation){
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
+        
+        mapView.setRegion(coordinateRegion, animated: true)
+        
+    
         routeNumberPicker.delegate = self
         routeNumberPicker.dataSource = self
     }
+    //////////////////////////////////////
+    //////////////////////////////////////
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
