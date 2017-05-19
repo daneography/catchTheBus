@@ -1,14 +1,14 @@
 //
-//  RiderViewController.swift
-//  catchTheBus
+//  driverInfoViewController.swift
+//  Pods
 //
 //  Created by Apple on 5/18/17.
-//  Copyright © 2017 TMCF. All rights reserved.
+//
 //
 
 import UIKit
 
-class RiderViewController: UIViewController {
+class driverInfoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

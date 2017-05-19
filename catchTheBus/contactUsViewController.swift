@@ -1,5 +1,5 @@
 //
-//  RiderViewController.swift
+//  contactUsViewController.swift
 //  catchTheBus
 //
 //  Created by Apple on 5/18/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RiderViewController: UIViewController {
+class contactUsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

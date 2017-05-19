@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180AE3701ECE46CE000AA86C /* driverInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180AE36F1ECE46CE000AA86C /* driverInfoViewController.swift */; };
+		180AE3721ECE46F1000AA86C /* driverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180AE3711ECE46F1000AA86C /* driverViewController.swift */; };
+		180AE3741ECE4735000AA86C /* RiderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180AE3731ECE4735000AA86C /* RiderViewController.swift */; };
+		180AE3761ECE4753000AA86C /* Rider2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180AE3751ECE4753000AA86C /* Rider2ViewController.swift */; };
+		180AE3781ECE4770000AA86C /* busETAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180AE3771ECE4770000AA86C /* busETAViewController.swift */; };
+		180AE37A1ECE47CD000AA86C /* contactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180AE3791ECE47CD000AA86C /* contactUsViewController.swift */; };
+		180AE37C1ECE5B10000AA86C /* pickerViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180AE37B1ECE5B10000AA86C /* pickerViewTest.swift */; };
 		188300361ECCD6A80054D4B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188300351ECCD6A80054D4B8 /* AppDelegate.swift */; };
 		188300381ECCD6A80054D4B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188300371ECCD6A80054D4B8 /* ViewController.swift */; };
 		1883003B1ECCD6A80054D4B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188300391ECCD6A80054D4B8 /* Main.storyboard */; };
@@ -51,6 +58,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		180AE36F1ECE46CE000AA86C /* driverInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = driverInfoViewController.swift; path = Pods/../driverInfoViewController.swift; sourceTree = SOURCE_ROOT; };
+		180AE3711ECE46F1000AA86C /* driverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = driverViewController.swift; sourceTree = "<group>"; };
+		180AE3731ECE4735000AA86C /* RiderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiderViewController.swift; sourceTree = "<group>"; };
+		180AE3751ECE4753000AA86C /* Rider2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rider2ViewController.swift; sourceTree = "<group>"; };
+		180AE3771ECE4770000AA86C /* busETAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = busETAViewController.swift; sourceTree = "<group>"; };
+		180AE3791ECE47CD000AA86C /* contactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contactUsViewController.swift; sourceTree = "<group>"; };
+		180AE37B1ECE5B10000AA86C /* pickerViewTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pickerViewTest.swift; sourceTree = "<group>"; };
 		188300321ECCD6A80054D4B8 /* catchTheBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catchTheBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		188300351ECCD6A80054D4B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		188300371ECCD6A80054D4B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,10 +146,17 @@
 				188300351ECCD6A80054D4B8 /* AppDelegate.swift */,
 				188300371ECCD6A80054D4B8 /* ViewController.swift */,
 				188300391ECCD6A80054D4B8 /* Main.storyboard */,
+				180AE37B1ECE5B10000AA86C /* pickerViewTest.swift */,
+				180AE3791ECE47CD000AA86C /* contactUsViewController.swift */,
+				180AE3771ECE4770000AA86C /* busETAViewController.swift */,
+				180AE3751ECE4753000AA86C /* Rider2ViewController.swift */,
+				180AE3731ECE4735000AA86C /* RiderViewController.swift */,
 				1883003F1ECCD6A80054D4B8 /* Assets.xcassets */,
 				188300411ECCD6A80054D4B8 /* LaunchScreen.storyboard */,
 				188300441ECCD6A80054D4B8 /* Info.plist */,
 				1883003C1ECCD6A80054D4B8 /* catchTheBus.xcdatamodeld */,
+				180AE36F1ECE46CE000AA86C /* driverInfoViewController.swift */,
+				180AE3711ECE46F1000AA86C /* driverViewController.swift */,
 			);
 			path = catchTheBus;
 			sourceTree = "<group>";
@@ -463,8 +484,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180AE3781ECE4770000AA86C /* busETAViewController.swift in Sources */,
+				180AE3701ECE46CE000AA86C /* driverInfoViewController.swift in Sources */,
+				180AE3741ECE4735000AA86C /* RiderViewController.swift in Sources */,
 				188300381ECCD6A80054D4B8 /* ViewController.swift in Sources */,
+				180AE37A1ECE47CD000AA86C /* contactUsViewController.swift in Sources */,
+				180AE3721ECE46F1000AA86C /* driverViewController.swift in Sources */,
 				1883003E1ECCD6A80054D4B8 /* catchTheBus.xcdatamodeld in Sources */,
+				180AE3761ECE4753000AA86C /* Rider2ViewController.swift in Sources */,
+				180AE37C1ECE5B10000AA86C /* pickerViewTest.swift in Sources */,
 				188300361ECCD6A80054D4B8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

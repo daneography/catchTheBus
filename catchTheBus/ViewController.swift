@@ -10,9 +10,10 @@ import UIKit
 import Alamofire
 
 
-class ViewController: UIViewController {
-    
-    
+class ViewController: UIViewController{
+
+
+
     @IBAction func userRider(_ sender: Any) {
         performSegue(withIdentifier: "displayRider", sender: self)
     }
@@ -27,18 +28,6 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        //let apiToContact = "http://developer.itsmarta.com/BRDRestService/RestBusRealTimeService/GetAllBus"
-        //Alamofire.request(apiToContact).validate().responseJSON(){ response in
-           // print(response.request)  // original URL request
-            //print(response.response) // HTTP URL response
-            //print(response.data)     // server data
-            //print(response.result)   // result of response serialization
-            
-          //  if let JSON = response.result.value {
-            //    print("It's Coming")
-              //  print("JSON: \(JSON)")
-            //}
-            //}
     }
 
     override func didReceiveMemoryWarning() {

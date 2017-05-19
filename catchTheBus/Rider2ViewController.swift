@@ -1,5 +1,5 @@
 //
-//  RiderViewController.swift
+//  Rider2ViewController.swift
 //  catchTheBus
 //
 //  Created by Apple on 5/18/17.
@@ -8,8 +8,13 @@
 
 import UIKit
 
-class RiderViewController: UIViewController {
+class Rider2ViewController: UIViewController {
 
+    
+    @IBAction func route(_ sender: Any) {
+        performSegue(withIdentifier: "displayBusETA", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

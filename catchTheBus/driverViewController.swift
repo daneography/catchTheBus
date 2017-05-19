@@ -1,5 +1,5 @@
 //
-//  RiderViewController.swift
+//  driverViewController.swift
 //  catchTheBus
 //
 //  Created by Apple on 5/18/17.
@@ -8,8 +8,14 @@
 
 import UIKit
 
-class RiderViewController: UIViewController {
+class driverViewController: UIViewController {
 
+    @IBAction func unwindToDriverViewController(_ segue: UIStoryboardSegue) {
+        
+        // for now, simply defining the method is sufficient.
+        // we'll add code later
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
