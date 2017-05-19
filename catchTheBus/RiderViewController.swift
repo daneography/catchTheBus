@@ -9,7 +9,12 @@
 import UIKit
 
 class RiderViewController: UIViewController {
-
+    @IBAction func unwindToRiderViewController(_ segue: UIStoryboardSegue) {
+        
+        // for now, simply defining the method is sufficient.
+        // we'll add code later
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

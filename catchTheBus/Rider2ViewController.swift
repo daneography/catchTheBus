@@ -10,7 +10,12 @@ import UIKit
 
 class Rider2ViewController: UIViewController {
 
-    
+    @IBAction func unwindToRider2ViewController(_ segue: UIStoryboardSegue) {
+        
+        // for now, simply defining the method is sufficient.
+        // we'll add code later
+        
+    }
     @IBAction func route(_ sender: Any) {
         performSegue(withIdentifier: "displayBusETA", sender: self)
     }
