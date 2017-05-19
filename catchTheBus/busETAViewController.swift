@@ -13,14 +13,28 @@ import MapKit
 
 class busETAViewController: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate{
     
+    @IBOutlet weak var stopInput: UITextField!
+    @IBOutlet weak var etaLabel: UILabel!
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var routeNumberPicker: UIPickerView!
-    @IBOutlet weak var busStopPicker: UIPickerView!
     let selectedRouteNumber = ["71","102", "191"]
-    
     //////////////////////////////////////
     //////////////////////////////////////
     
+    @IBAction func imHere(_ sender: Any) {
+        if stopInput.text == "525"{
+            etaLabel.text = "5 minutes"
+        }
+        if stopInput.text == "525"{
+            etaLabel.text = "5 minutes"
+        }
+        else if stopInput.text == "125"{
+            etaLabel.text = "8 minutes"
+        }
+        else if stopInput.text == "625"{
+            etaLabel.text = "10 minutes"
+        }
+    }
     @IBOutlet weak var mapView: MKMapView!
     
     
@@ -40,7 +54,6 @@ class busETAViewController: UIViewController,UIPickerViewDataSource, UIPickerVie
         
         mapView.setRegion(coordinateRegion, animated: true)
         
-    
         routeNumberPicker.delegate = self
         routeNumberPicker.dataSource = self
     }
@@ -70,6 +83,7 @@ class busETAViewController: UIViewController,UIPickerViewDataSource, UIPickerVie
                 
             }
         }
+        
     }
     
     
@@ -82,5 +96,4 @@ class busETAViewController: UIViewController,UIPickerViewDataSource, UIPickerVie
         // Pass the selected object to the new view controller.
     }
     */
-
-}
+    }
