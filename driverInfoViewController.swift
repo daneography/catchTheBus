@@ -9,10 +9,16 @@
 import UIKit
 
 class driverInfoViewController: UIViewController {
-
+    var eta:busETAViewController? = nil
+    
+    @IBOutlet weak var label: UILabel!
+    
+    var wait: String = busETAViewController().people
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        eta = busETAViewController()
         // Do any additional setup after loading the view.
     }
 
@@ -21,8 +27,8 @@ class driverInfoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -30,6 +36,6 @@ class driverInfoViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    //
 
 }

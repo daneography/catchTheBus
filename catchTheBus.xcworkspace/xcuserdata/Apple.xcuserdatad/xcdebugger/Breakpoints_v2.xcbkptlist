@@ -2,4 +2,69 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "catchTheBus/busETAViewController.swift"
+            timestampString = "516907787.687627"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "catchTheBus.busETAViewController.regionRadius.getter : Swift.Double"
+                  moduleName = "catchTheBus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Apple/Desktop/TMCF%20OFC2017/catchTheBus/catchTheBus/busETAViewController.swift"
+                  timestampString = "516907068.594638"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "catchTheBus.busETAViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; catchTheBus.busETAViewController"
+                  moduleName = "catchTheBus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Apple/Desktop/TMCF%20OFC2017/catchTheBus/catchTheBus/busETAViewController.swift"
+                  timestampString = "516907068.600489"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "653">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "catchTheBus.busETAViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;catchTheBus.busETAViewController&gt;"
+                  moduleName = "catchTheBus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Apple/Desktop/TMCF%20OFC2017/catchTheBus/catchTheBus/busETAViewController.swift"
+                  timestampString = "516907068.605001"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "526">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

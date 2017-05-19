@@ -12,6 +12,13 @@ import MapKit
 
 
 class busETAViewController: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate{
+    var people: String = "No"
+    @IBAction func hereNow(_ sender: Any) {
+        people = "Yes"
+        print(people)
+        
+    }
+    
     
     @IBOutlet weak var stopInput: UITextField!
     @IBOutlet weak var etaLabel: UILabel!
@@ -25,14 +32,14 @@ class busETAViewController: UIViewController,UIPickerViewDataSource, UIPickerVie
         if stopInput.text == "525"{
             etaLabel.text = "5 minutes"
         }
-        if stopInput.text == "525"{
-            etaLabel.text = "5 minutes"
+        else if stopInput.text == "535"{
+            etaLabel.text = "3 minutes"
         }
         else if stopInput.text == "125"{
             etaLabel.text = "8 minutes"
         }
         else if stopInput.text == "625"{
-            etaLabel.text = "10 minutes"
+            etaLabel.text = "Delayed use Bus 2"
         }
     }
     @IBOutlet weak var mapView: MKMapView!
@@ -42,10 +49,39 @@ class busETAViewController: UIViewController,UIPickerViewDataSource, UIPickerVie
         super.viewDidLoad()
         
         //set initial location in Atlanta
-        let initialLocation = CLLocation(latitude: 33.748995, longitude: -84.387982)
+        let initialLocation = CLLocation(latitude: 33.773605, longitude: -84.36543)
         
         centerMapOnLocation(location: initialLocation)
-    }
+        
+        //bustop.title = "525"
+        //bustop.cooordinate = CLL.....
+                    //= MKPointAnnotation()
+        let busStop1 =  MKPointAnnotation()
+        busStop1.title="525"
+        busStop1.coordinate = CLLocationCoordinate2D(latitude : 33.7737999, longitude : -84.362218)
+        mapView.addAnnotation(busStop1)
+        
+        let busStop2 =  MKPointAnnotation()
+        busStop2.title="535"
+        busStop2.coordinate = CLLocationCoordinate2D(latitude : 33.773605, longitude : -84.363679)
+        mapView.addAnnotation(busStop2)
+        
+        let busStop3 =  MKPointAnnotation()
+        busStop3.title="125"
+        busStop3.coordinate = CLLocationCoordinate2D(latitude : 33.773355, longitude : -84.365138)
+        mapView.addAnnotation(busStop3)
+        
+        let busStop4 =  MKPointAnnotation()
+        busStop4.title="625"
+        busStop4.coordinate = CLLocationCoordinate2D(latitude : 33.778995, longitude : -84.364982)
+        mapView.addAnnotation(busStop4)
+        
+        
+        
+    
+    
+    
+}
     
     let regionRadius : CLLocationDistance = 1000
     
@@ -72,12 +108,16 @@ class busETAViewController: UIViewController,UIPickerViewDataSource, UIPickerVie
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return selectedRouteNumber[row]
     }
+    
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print(selectedRouteNumber[row])
         let apiToPrepare = "http://developer.itsmarta.com/BRDRestService/RestBusRealTimeService/GetBusByRoute/"
         let apiToContact = (apiToPrepare + selectedRouteNumber[row])
         Alamofire.request(apiToContact).validate().responseJSON(){ response in
             if let JSON = response.result.value {
+     //           let firstBus = longitude["LONGITUDE"]
+                
                 print("It's Coming")
                 print("JSON: \(JSON)")
                 
@@ -85,6 +125,8 @@ class busETAViewController: UIViewController,UIPickerViewDataSource, UIPickerVie
         }
         
     }
+    
+    
     
     
     /*
