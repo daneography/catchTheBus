@@ -347,7 +347,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bus Stop #:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIS-j9-NVz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bus Stop:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIS-j9-NVz">
                                 <rect key="frame" x="230" y="72" width="93" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -417,6 +417,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="busStopPicker" destination="pc5-27-vkZ" id="z2A-Rm-m9Z"/>
                         <outlet property="mapView" destination="TsX-Ed-zUZ" id="dVt-te-dGg"/>
                         <outlet property="routeNumberPicker" destination="43e-kM-u9N" id="PTO-c7-Oxu"/>
                         <outlet property="textLabel" destination="ZQL-0c-o0C" id="XFd-m9-Jeq"/>

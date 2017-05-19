@@ -22,7 +22,6 @@
 		188300431ECCD6A80054D4B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188300411ECCD6A80054D4B8 /* LaunchScreen.storyboard */; };
 		1883004E1ECCD6A80054D4B8 /* catchTheBusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1883004D1ECCD6A80054D4B8 /* catchTheBusTests.swift */; };
 		188300591ECCD6A80054D4B8 /* catchTheBusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188300581ECCD6A80054D4B8 /* catchTheBusUITests.swift */; };
-		188AAD311ECE93F000030145 /* BusInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188AAD301ECE93F000030145 /* BusInfo.swift */; };
 		D365E0E3D6676F7316260B48 /* Pods_catchTheBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 690782E699EB85036F14415D /* Pods_catchTheBus.framework */; };
 		E7A166D8FEC5D53A81C802D4 /* Pods_catchTheBusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2065DAD038CAACA27F8D837C /* Pods_catchTheBusTests.framework */; };
 		E8F81D90989A952D6A670052 /* Pods_catchTheBusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743EB2CF2612D1D3C20CF83F /* Pods_catchTheBusUITests.framework */; };
@@ -80,7 +79,6 @@
 		188300541ECCD6A80054D4B8 /* catchTheBusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = catchTheBusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		188300581ECCD6A80054D4B8 /* catchTheBusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = catchTheBusUITests.swift; sourceTree = "<group>"; };
 		1883005A1ECCD6A80054D4B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		188AAD301ECE93F000030145 /* BusInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusInfo.swift; sourceTree = "<group>"; };
 		1C9F6B8FF1B851FD2508FD2B /* Pods-catchTheBus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-catchTheBus.release.xcconfig"; path = "Pods/Target Support Files/Pods-catchTheBus/Pods-catchTheBus.release.xcconfig"; sourceTree = "<group>"; };
 		2065DAD038CAACA27F8D837C /* Pods_catchTheBusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_catchTheBusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24EAF7FFB3064AE68BC7E62B /* Pods-catchTheBusUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-catchTheBusUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-catchTheBusUITests/Pods-catchTheBusUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 				188300351ECCD6A80054D4B8 /* AppDelegate.swift */,
 				188300371ECCD6A80054D4B8 /* ViewController.swift */,
 				188300391ECCD6A80054D4B8 /* Main.storyboard */,
-				188AAD301ECE93F000030145 /* BusInfo.swift */,
 				180AE37B1ECE5B10000AA86C /* pickerViewTest.swift */,
 				180AE3791ECE47CD000AA86C /* contactUsViewController.swift */,
 				180AE3771ECE4770000AA86C /* busETAViewController.swift */,
@@ -487,7 +484,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				188AAD311ECE93F000030145 /* BusInfo.swift in Sources */,
 				180AE3781ECE4770000AA86C /* busETAViewController.swift in Sources */,
 				180AE3701ECE46CE000AA86C /* driverInfoViewController.swift in Sources */,
 				180AE3741ECE4735000AA86C /* RiderViewController.swift in Sources */,

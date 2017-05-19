@@ -15,7 +15,9 @@ class busETAViewController: UIViewController,UIPickerViewDataSource, UIPickerVie
     
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var routeNumberPicker: UIPickerView!
+    @IBOutlet weak var busStopPicker: UIPickerView!
     let selectedRouteNumber = ["71","102", "191"]
+    
     //////////////////////////////////////
     //////////////////////////////////////
     
@@ -65,6 +67,7 @@ class busETAViewController: UIViewController,UIPickerViewDataSource, UIPickerVie
             if let JSON = response.result.value {
                 print("It's Coming")
                 print("JSON: \(JSON)")
+                
             }
         }
     }
